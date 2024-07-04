@@ -1,0 +1,46 @@
+body,p{
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem; /*tamanho da fonte, proporcional ao dispositivo de visualização*/
+    font-style: italic; /*tipo de fonte*/
+    color: #373737;/*cor do texto*/
+    text-align: center;/*alinhamento do texto*/
+}
+.principal{
+    width: 80%; /*para os conteúdos não ficarem colados nas laterais*/
+    margin: 0 auto;
+    display: grid;/* utilizado para alinhar os elementos do container em duas dimensões*/
+    grid-template-columns: 75% 25%;/*medida das colunas*/
+    grid-template-rows: 100px 450px 150px; /*medida das linhas do layout*/
+    grid-template-areas: "cabecalho cabecalho"
+                        "secao barra_lateral"
+                        "rodape rodape";
+}
+header{
+    grid-area: cabecalho;
+    background-color:#5cd0d6;
+}
+section{
+    grid-area: secao;
+    background-color: #E05DA1;
+}
+aside{
+    grid-area:barra_lateral;
+    background-color:  #E0D475;
+}
+footer{
+    grid-area: rodape;
+    display: flex; /*utilização do flexbox para alinhar os elementos do contener em uma dimensão*/
+    justify-content: space-evenly;/*propriedade para alinhar os elementos em uma dimensão, com espaçamento igual*/
+}
+.secaof1, .secaof2, .secaof3{
+    width: 25%;
+    background-color:#5cd0d6;
+}
+.secaof2{
+    width: 50%;
+    margin: 0 2px;
+}
+.secaof3{
+    margin: 0;
+}
